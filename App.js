@@ -18,8 +18,10 @@ const App = () => {
 
   // Function to handle mole whacking
   const handleWhack = () => {
-    setScore(score + 1); // Increment the score
+    // Increment the score
+    setScore(score + 1);
     console.log("Mole whacked!", score + 1);
+
     clearInterval(moleTimerRef.current); // Clear the current timer
     setActiveMole(null); // Hide the mole immediately
     moleTimerRef.current = setTimeout(switchMole, 1000); // Start a new cycle after a delay
@@ -32,6 +34,7 @@ const App = () => {
 
   return (
     <View style={styles.container}>
+      <Text style={{fontSize: 30}}>Whack-a-Mole</Text>
       <Text>Score: {score}</Text>
       <View style={styles.grid}>
         <Button
