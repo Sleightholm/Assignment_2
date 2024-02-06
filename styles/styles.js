@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     margin: 5,
-    backgroundColor: "#f0f0f0", // Optional: for visual debugging
+    backgroundColor: "#f0f0f0",
   },
   grid: {
     flexDirection: "row",
@@ -27,6 +27,12 @@ const styles = StyleSheet.create({
     alignItems: "center",
     margin: 10,
   },
+  buttonContainer: {
+    margin: 10,
+    flexDirection: 'row',
+    padding: 10,
+    justifyContent: 'space-between',
+  }
 });
 
 export default styles;
