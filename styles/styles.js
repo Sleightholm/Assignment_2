@@ -13,8 +13,8 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   cell: {
-    width: 100, // Set according to your grid size
-    height: 100, // Set according to your grid size
+    width: 100,
+    height: 100,
     justifyContent: "center",
     alignItems: "center",
     margin: 5,

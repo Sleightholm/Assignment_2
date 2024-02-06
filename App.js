@@ -24,7 +24,7 @@ const App = () => {
 
     clearInterval(moleTimerRef.current); // Clear the current timer
     setActiveMole(null); // Hide the mole immediately
-    moleTimerRef.current = setTimeout(switchMole, 1000); // Start a new cycle after a delay
+    moleTimerRef.current = setTimeout(switchMole, 2000); // Start a new cycle after a delay
   };
 
   useEffect(() => {
@@ -44,6 +44,7 @@ const App = () => {
             setActiveMole(null); // Hide the mole immediately
             setScore(0); // Reset the score
             moleTimerRef.current = setInterval(switchMole, 2000); // Change mole every 2 seconds
+            console.log("Game Reset")
           }}
         >
           Reset Game
