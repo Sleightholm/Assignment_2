@@ -6,7 +6,7 @@ const Mole = ({ visible, onWhack }) => {
 
   return (
     <TouchableOpacity onPress={onWhack}>
-      <Text>🐹</Text>
+      <Text style={{fontSize: 40}}>🐹</Text>
     </TouchableOpacity>
   );
 };

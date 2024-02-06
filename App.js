@@ -55,9 +55,11 @@ const App = () => {
               clearInterval(moleTimerRef.current);
               setActiveMole(null);
               setPrbutton(false);
+              console.log("Game Paused");
             } else {
               moleTimerRef.current = setInterval(switchMole, 2000);
               setPrbutton(true);
+              console.log("Game Resumed");
             }
           }}
         >
