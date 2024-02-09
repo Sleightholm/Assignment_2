@@ -1,8 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
-import { View, Text, Button } from "react-native";
-import Mole from "./app/mole";
-import styles from "./styles/styles";
+import { View, Text, Button, Pressable, TouchableOpacity } from "react-native";
+import Mole from "./mole";
+import styles from "../styles/styles";
 import { StatusBar } from "expo-status-bar";
+import { Link } from "expo-router";
 
 const App = () => {
   const [activeMole, setActiveMole] = useState(null); // Track the active mole
@@ -50,11 +51,22 @@ const App = () => {
 
   return (
     <View style={styles.container}>
+        <Link
+        style={styles.button}
+        href={{
+          pathname: "/",
+        }} asChild
+      >
+        <Pressable style={styles.pressable}>
+          <Text style={styles.buttonText}>Home</Text>
+        </Pressable>
+      </Link>
       <Text style={{fontSize: 30}}>Whack-a-Mole</Text>
       <Text>Score: {score}</Text>
       <Text>Misses: {misses}</Text>
       <View style={styles.buttonContainer}>
-        <Button
+        <Pressable
+          style={styles.pressable}
           title="Reset"
           onPress={() => {
             clearInterval(moleTimerRef.current); // Clear the current timer
@@ -66,11 +78,10 @@ const App = () => {
             console.log("Game Reset")
           }}
         >
-          Reset Game
-        </Button>
-        <View style={{ width: 20, height: 'auto' }} /> 
-        <Button
-          title={prbutton ? "Pause" : "Resume"}
+          <Text style={styles.buttonText}>Reset</Text>
+        </Pressable>
+        <Pressable
+          style={styles.pressable}
           onPress={() => {
             if (prbutton) {
               clearInterval(moleTimerRef.current);
@@ -84,8 +95,8 @@ const App = () => {
             }
           }}
         >
-          Pause Game
-        </Button>
+          <Text style={styles.buttonText}>{prbutton ? "Pause" : "Resume"}</Text>
+        </Pressable>
         </View>
       <StatusBar style="auto" />
       <View style={styles.grid}>
