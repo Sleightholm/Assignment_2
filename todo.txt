@@ -1,0 +1,6 @@
+1. Add more moles per level
+2. Add sound effects on hits (Check ChatGPT - title "Shorten buttons..")
+3. Refine the difficulty levels
+4. Add more visual effects/UI
+5. Add more levels?
+6. Add a high score feature (leaderboard)

@@ -50,6 +50,28 @@ const styles = StyleSheet.create({
     color: "white",
     fontSize: 20,
   },
+  subtitle: {
+    textAlign: "center",
+    fontSize: 15,
+  },
+  overlay: {
+    position: "absolute",
+    backgroundColor: "rgba(0, 0, 0, 0.75)",
+    top: 0,
+    bottom: 0,
+    left: 0,
+    right: 0,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  menuTitle: {
+    fontSize: 24,
+    color: "white",
+    marginBottom: 20,
+  },
+  menuButton: {
+    marginVertical: 10,
+  },
 });
 
 export default styles;
